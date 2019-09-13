@@ -8,7 +8,7 @@ public class MyController {
 
     @GetMapping(value = "/")
     public String index() {
-        return "This is the root. Nothing to see here.";
+        return "You've reached this simple Spring app. Not much to see. This is the root. That's it folks.";
     }
 
 }
