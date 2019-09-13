@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: springboot-simple
+  labels:
+    app: springboot-simple
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-simple
+  template:
+    metadata:
+      labels:
+        app: springboot-simple
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: arch
+                operator: In
+                values:
+                - amd64
+      containers:
+      - name: springboot-simple
+        image: registry.gitlab.com/dariuscooper/springboot-simple:latest
+        ports:
+        - containerPort: 8080
+      containers:
+      - name: springboot-simple
+        image: dariuscooper/springboot-simple
+        ports:
+        - containerPort: 8080
+          protocol: TCP        
+        
+        
