@@ -24,6 +24,8 @@ spec:
         image: dariuscooper/springboot-simple
         ports:
         - containerPort: 8080
-          protocol: TCP        
+          protocol: TCP 
+      imagePullSecrets:
+      - name: reg-gitlab-darius          
         
         
