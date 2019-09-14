@@ -19,12 +19,6 @@ spec:
         image: registry.gitlab.com/dariuscooper/springboot-simple:latest
         ports:
         - containerPort: 8080
-      containers:
-      - name: springboot-simple
-        image: dariuscooper/springboot-simple
-        ports:
-        - containerPort: 8080
-          protocol: TCP 
       imagePullSecrets:
       - name: reg-gitlab-darius          
         
