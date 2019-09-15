@@ -24,9 +24,9 @@ spec:
           mountPath: /data
       imagePullSecrets:
       - name: reg-gitlab-darius  
-    volumes:
-    - name: myvol
-      persistentVolumeClaim:
-         claimName: myapp-nfs      
+      volumes:
+      - name: myvol
+        persistentVolumeClaim:
+           claimName: myapp-nfs      
         
         
