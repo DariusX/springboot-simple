@@ -15,8 +15,8 @@ spec:
         app: springboot-simple2
     spec:
       containers:
-      - name: springboot-simple2
-        image: registry.gitlab.com/dariuscooper/springboot-simple2:latest
+      - name: springboot-simple
+        image: registry.gitlab.com/dariuscooper/springboot-simple:latest
         ports:
         - containerPort: 8080
         volumeMounts:
